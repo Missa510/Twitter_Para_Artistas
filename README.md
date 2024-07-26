@@ -6,8 +6,11 @@
 ### Dependencias
 
 > npm i mongoose
+> <br>
 > npm i next-auth
+> <br>
 > npm i --save-dev @midudev/tailwind-animations
+> <br>
 > npm install @svgr/webpack --save-dev
 
 * Actualizar dependencias
@@ -25,7 +28,9 @@ Esto se puede cambiar a necesidad de los dos. Lo puedes usar en **MongoDB Compas
 ### Crear Colecciones
 
 > db.createCollection("usermodels")
+> <br>
 > db.createCollection("tipomodels")
+> <br>
 > db.createCollection("esatdomodels")
 
 ### Insartar datos
