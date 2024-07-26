@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import animations from "@midudev/tailwind-animations";
 
 const config: Config = {
   content: [
@@ -8,13 +9,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        'nigga': '#000',
+        'nigga-secondary': '#101010',
+        'niggant': '#efefef',
+        'niggant-secondary': '#bfbfba',
       },
+      backgroundImage: {
+        'banner-fondo': "url('../../public/images/banner_home.webp')",
+        'banner-fondo-claro': "url('../../public/images/banner_home_claro.webp')"
+      }
     },
   },
-  plugins: [],
+  plugins: [animations],
 };
+
 export default config;

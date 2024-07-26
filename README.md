@@ -1,36 +1,116 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Proyecto ShareToGrow
 
-## Getting Started
+## Importante
+**Hay que hacer un insertMany de todos los documentos de mongodb antes de lanzar la app (Los datos por default del sitio, POR FAVOR!!!)**
 
-First, run the development server:
+### Dependencias
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+> npm i mongoose
+> npm i next-auth
+> npm i --save-dev @midudev/tailwind-animations
+> npm install @svgr/webpack --save-dev
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* Actualizar dependencias
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> npm i
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## MongoDB
 
-## Learn More
+Esto se puede cambiar a necesidad de los dos. Lo puedes usar en **MongoDB Compass** y **mongosh** Faltan cosas
 
-To learn more about Next.js, take a look at the following resources:
+### Crear Base de datos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+> use proyect
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Crear Colecciones
 
-## Deploy on Vercel
+> db.createCollection("usermodels")
+> db.createCollection("tipomodels")
+> db.createCollection("esatdomodels")
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Insartar datos
+** Insertar estados **
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Estados del usuario
+> db.user.models.insertMany([
+>  {
+>    estado: 'banned',
+>    Id_provisional: 2,
+>  },
+>  {
+>    estado: 'activo',
+>    Id_provisional: 1,
+>  },
+>  {
+>    estado: 'suspendido temporalmente',
+>    Id_provisional: 3,
+>  },
+>  {
+>    estado: 'suspendido indefinidamente',
+>    Id_provisional: 4,
+>  },
+>  {
+>    estado: 'desactivado',
+>    Id_provisional: 5,
+>  }
+>])
+
+2. Tipos de usuario
+
+> db.tipomodels.insertMany([
+>   {
+>     tipo: 'destacado',
+>     Id_provisional: 6,
+>   },
+>   {
+>     tipo: 'ADMIN',
+>     Id_provisional: 2,
+>   },
+>   {
+>     tipo: 'OWNER',
+>     Id_provisional: 1,
+>   },
+>   {
+>     tipo: 'MODER',
+>     Id_provisional: 3,
+>   },
+>   {
+>     tipo: 'normal',
+>     Id_provisional: 5,
+>   },
+>   {
+>     tipo: 'consumidor',
+>     Id_provisional: 4,
+>   }
+> ])
+
+3. User 
+
+> db.usermodels.insertMany([
+>   {
+>     name: 'lo que quiera (opcional)',
+>     last: 'lo que quiera (opcional)',
+>     nick: 'lo que quiera',
+>     bio: 'lo que quiera (opcional)',
+>     email: 'lo que quiera',
+>     password: 'lo que quiera',
+>     lugar_de_origen: 'lo que quiera (opcional)',
+>     tipo_de_usuario: [ { Id_provisional: 'lo que quiera (en numeros)' } ],
+>     estado_de_usuario: [ { Id_provisional: 'lo que quiera (en numeros)' } ],
+>     posts: { tpye: [] }, Array (falta crear este modelo)
+>     comentarios: { tpye: [] }, Array (falta crear este modelo)
+>   }
+> ])
+
+# TODO
+
+1. Arreglar el home de la página (tiene modo claro y oscuro)
+2. Añadir el Login y Register
+3. Validar con Next Auth
+4. Crear el proyecto de Spotify para las API's y colocarlo
+5. Crear los modelos de las demás cosas que nos faltan (Mirar la estructura)
+6. Hacer llamada
+
+PD: Maduro no gana mañana
+
+Besos en la cola
