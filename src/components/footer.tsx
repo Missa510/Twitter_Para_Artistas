@@ -5,15 +5,17 @@ function Footer() {
     return (
         <footer className="grid place-items-center lg:flex lg:items-center lg:justify-between py-7 px-10 border-nigga dark:border-niggant border-t-2 backdrop-blur-md">
             <section>
-                <Link className="flex bg-nigga text-niggant px-3 py-2 rounded-md" href={`https://spacehey.com/missa510uwu`} target="_blank" rel="noopener noreferrer nofollow">
-                    <span>
-                        <MySpacesLogo fill="#fff" height={15} width={15}/>
+
+                <Link className="flex bg-niggant text-nigga px-3 py-2 rounded-md" href={`https://spacehey.com/missa510uwu`} target="_blank" rel="noopener noreferrer nofollow">
+                    <MySpacesLogo clases={`text-niggant dark:text-nigga`} height={20} width={20} />
+                    <span className="ml-1">
+                        Blog de Missa
                     </span>
-                    Blog de Missa
                 </Link>
                 <Link href={`https://github.com/Missa510`}>
                     Proyectos de Missa
                 </Link>
+
             </section>
             <section>
                 <div>

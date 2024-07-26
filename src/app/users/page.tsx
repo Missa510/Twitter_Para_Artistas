@@ -6,15 +6,19 @@ import NavBar from '@/components/navbar';
 import Footer from '@/components/footer';
 
 async function CargarUsuarios() {
+
     await ConeccionAlDB()
+
     const user_data = await UserModel.find()
+
+    // console.log(user_data)
     return user_data
 }
 
 async function VerificarEstado(data_user: Array<any>): Promise<string> {
 
     // Poner la vairable como Array (viene como Object de todos modos)
-    const BuscarEstado = data_user.at(0)
+    const BuscarEstado = data_user as Array<any>
 
     // Coneccion con la Base de datos
     await ConeccionAlDB()
@@ -32,7 +36,8 @@ async function VerificarEstado(data_user: Array<any>): Promise<string> {
 async function VerificarTipo(data_user: Array<any>): Promise<string> {
 
     // Poner la vairable como Array (viene como Object de todos modos)
-    const BuscarTipo = data_user.at(0)
+    const BuscarTipo = data_user as Array<any>
+    // console.log(BuscarTipo)
 
     // Coneccion con la Base de datos
     await ConeccionAlDB()

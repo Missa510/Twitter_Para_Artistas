@@ -10,8 +10,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'nigga': '#000',
-        'nigga-secondary': '#101010',
+        'svg-nigga': 'fill: #101010',
+        'svg-niggant': 'fill: #efefef',
+        'nigga': '#101010',
+        'nigga-secondary': '#202020',
         'niggant': '#efefef',
         'niggant-secondary': '#bfbfba',
       },

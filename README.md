@@ -12,6 +12,8 @@
 > npm i --save-dev @midudev/tailwind-animations
 > <br>
 > npm install @svgr/webpack --save-dev
+> <br>
+> npm i --save react-toastify
 
 * Actualizar dependencias
 
@@ -91,25 +93,13 @@ Esto se puede cambiar a necesidad de los dos. Lo puedes usar en **MongoDB Compas
 
 3. User 
 
-> db.usermodels.insertMany([
->   {
->     name: 'lo que quiera (opcional)',
->     last: 'lo que quiera (opcional)',
->     nick: 'lo que quiera',
->     bio: 'lo que quiera (opcional)',
->     email: 'lo que quiera',
->     password: 'lo que quiera',
->     lugar_de_origen: 'lo que quiera (opcional)',
->     tipo_de_usuario: [ { Id_provisional: 'lo que quiera (en numeros)' } ],
->     estado_de_usuario: [ { Id_provisional: 'lo que quiera (en numeros)' } ],
->     posts: { tpye: [] }, Array (falta crear este modelo)
->     comentarios: { tpye: [] }, Array (falta crear este modelo)
->   }
-> ])
+> db.usermodels.insertMany( [{ 'name': 'Santiago', 'last': 'Quintero', 'nick': 'Missa510UwU', 'bio': 'Negros de Mierda', 'email': 'sjqv05@gmail.com', 'password': 'Burythelight0123$$', 'lugar_de_origen': 'San Cristóbal', 'tipo_de_usuario': { 'Id_provisional': 1 }, 'estado_de_usuario': { 'Id_provisional': 1 } }] )
 
 # TODO
 
 1. Arreglar el home de la página (tiene modo claro y oscuro)
+<br>
+* **SGV's y el footer**
 2. Añadir el Login y Register
 3. Validar con Next Auth
 4. Crear el proyecto de Spotify para las API's y colocarlo
