@@ -93,7 +93,7 @@ Esto se puede cambiar a necesidad de los dos. Lo puedes usar en **MongoDB Compas
 
 3. User 
 
-> db.usermodels.insertMany( [{ 'name': 'Santiago', 'last': 'Quintero', 'nick': 'Missa510UwU', 'bio': 'Negros de Mierda', 'email': 'sjqv05@gmail.com', 'password': 'Burythelight0123$$', 'lugar_de_origen': 'San Cristóbal', 'tipo_de_usuario': { 'Id_provisional': 1 }, 'estado_de_usuario': { 'Id_provisional': 1 } }] )
+> db.usermodels.insertMany( [{ 'name': ' ', 'last': ' ', 'nick': ' ', 'bio': 'Negros de Mierda', 'email': ' ', 'password': ' ', 'lugar_de_origen': '', 'tipo_de_usuario': { 'Id_provisional': 1 }, 'estado_de_usuario': { 'Id_provisional': 1 } }] )
 
 # TODO
 
