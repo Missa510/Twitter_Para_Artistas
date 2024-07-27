@@ -6,7 +6,8 @@ interface SVGProps{
 
 const MySpaceLogo = ({width, height, clases}: SVGProps) => (
     <svg
-    fill={clases}
+    className={clases}
+    fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 1200 1200"
     xmlSpace="preserve"

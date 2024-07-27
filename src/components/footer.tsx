@@ -1,19 +1,24 @@
 import Link from "next/link";
 import MySpacesLogo from "@/components/svgs/MySpaceLogo";
+import GithubLogo from "./svgs/GitHubLogo"; "@/components/svgs/GitHubLogo";
 
 function Footer() {
     return (
         <footer className="grid place-items-center lg:flex lg:items-center lg:justify-between py-7 px-10 border-nigga dark:border-niggant border-t-2 backdrop-blur-md">
-            <section>
+            <section className="grid place-items-center gap-y-2">
 
-                <Link className="flex bg-niggant text-nigga px-3 py-2 rounded-md" href={`https://spacehey.com/missa510uwu`} target="_blank" rel="noopener noreferrer nofollow">
+                <Link className="w-full align-center justify-center flex bg-nigga text-niggant hover:animate-scale dark:bg-niggant dark:text-nigga px-3 py-2 rounded-md" href={`#`} target="_blank" rel="noopener noreferrer nofollow">
                     <MySpacesLogo clases={`text-niggant dark:text-nigga`} height={20} width={20} />
                     <span className="ml-1">
                         Blog de Missa
                     </span>
                 </Link>
-                <Link href={`https://github.com/Missa510`}>
-                    Proyectos de Missa
+
+                <Link className="w-full align-center justify-center flex bg-nigga text-niggant hover:animate-scale dark:bg-niggant dark:text-nigga px-3 py-2 rounded-md" href={`#`} target="_blank" rel="noopener noreferrer nofollow">
+                    <GithubLogo clases={`text-niggant dark:text-nigga`} height={20} width={20} />
+                    <span className="ml-1">
+                        Proyectos de Missa
+                    </span>
                 </Link>
 
             </section>
