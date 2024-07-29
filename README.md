@@ -14,8 +14,13 @@
 > npm install @svgr/webpack --save-dev
 > <br>
 > npm i --save react-toastify
+> <br>
+> npx shadcn-ui@latest init
+> <br>
+> npm install next-themes
 
-* Actualizar dependencias
+
+* Actualizar dependencias de 1
 
 > npm i
 
@@ -93,7 +98,7 @@ Esto se puede cambiar a necesidad de los dos. Lo puedes usar en **MongoDB Compas
 
 3. User 
 
-> db.usermodels.insertMany( [{ 'name': 'Santiago', 'last': 'Quintero', 'nick': 'Missa510UwU', 'bio': 'Negros de Mierda', 'email': 'sjqv05@gmail.com', 'password': 'Burythelight0123$$', 'lugar_de_origen': 'San Cristóbal', 'tipo_de_usuario': { 'Id_provisional': 1 }, 'estado_de_usuario': { 'Id_provisional': 1 } }] )
+> db.usermodels.insertMany( [{ 'name': ' ', 'last': ' ', 'nick': ' ', 'bio': 'Negros de Mierda', 'email': ' ', 'password': ' ', 'lugar_de_origen': '', 'tipo_de_usuario': { 'Id_provisional': 1 }, 'estado_de_usuario': { 'Id_provisional': 1 } }] )
 
 # TODO
 
@@ -109,3 +114,12 @@ Esto se puede cambiar a necesidad de los dos. Lo puedes usar en **MongoDB Compas
 PD: Maduro no gana mañana
 
 Besos en la cola
+
+### Link de los docs
+[Docs de NextJS](https://nextjs.org/docs)
+<br>
+[Docs de Tailwind](https://tailwindcss.com/docs/installation)
+<br>
+[Docs de ShadCN UI](https://ui.shadcn.com/docs)
+<br>
+[MongoDB](https://www.mongodb.com/)
