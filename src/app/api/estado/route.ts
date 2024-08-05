@@ -5,7 +5,7 @@ import { NextResponse, NextRequest } from "next/server";
 export async function GET() {
     //Coneccion asincrónica
     await ConeccionAlDB()
-
+   
     //Consulta a la BD de los usuarios
     const estado_datos = await EstadoModel.find()
     // Respuesta del servidor
