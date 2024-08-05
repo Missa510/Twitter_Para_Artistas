@@ -44,7 +44,7 @@ Esto se puede cambiar a necesidad de los dos. Lo puedes usar en **MongoDB Compas
 ** Insertar estados **
 
 1. Estados del usuario
-> db.user.models.insertMany([
+> db.estadomodels.insertMany([
 >  {
 >    estado: 'banned',
 >    Id_provisional: 2,
