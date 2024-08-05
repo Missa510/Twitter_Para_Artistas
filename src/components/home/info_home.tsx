@@ -1,6 +1,6 @@
 function InfoHome() {
     return (
-        <section className="grid place-items-center text-start">
+        <section className="grid place-items-center text-start h-full">
 
             <div id="texto-home" className="mt-[calc(25vh)] mb-[calc(26vh)] lg:mt-[calc(30vh)] lg:mb-[calc(39vh)]">
                 <h1 className="font-bold uppercase text-nigga dark:text-niggant text-7xl text-center"> ¡Bienvenido, artista! </h1>

@@ -38,7 +38,7 @@ Esto se puede cambiar a necesidad de los dos. Lo puedes usar en **MongoDB Compas
 > <br>
 > db.createCollection("tipomodels")
 > <br>
-> db.createCollection("esatdomodels")
+> db.createCollection("estadomodels")
 
 ### Insartar datos
 ** Insertar estados **
@@ -116,6 +116,7 @@ PD: Maduro no gana mañana
 Besos en la cola
 
 ### Link de los docs
+
 [Docs de NextJS](https://nextjs.org/docs)
 <br>
 [Docs de Tailwind](https://tailwindcss.com/docs/installation)
