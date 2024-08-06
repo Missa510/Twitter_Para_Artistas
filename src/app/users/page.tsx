@@ -60,27 +60,27 @@ async function user() {
     }
     // console.log(user_data)
     return (
-        <main>
-            <NavBar />
-            <h1 className="text-white text-3xl text-center"> Usuarios ({user_data.length}) </h1>
-            {user_data.map((user) => (
-                <div key={user._id}>
-                    <h1>{user.last + ", " + user.name}</h1>
-                    <strong>{user.email}</strong>
-                    <br />
-                    <ul>
-                        <li>
-                            {VerificarTipo(user.tipo_de_usuatrio)}
-                        </li>
-                        <li>
-                            {VerificarEstado(user.estado_de_usuatrio)}
-                        </li>
-                    </ul>
-                </div>
-            ))}
-            <Footer />
-        </main>
-    )
+      <main
+        className="bg-banner-fondo-claro dark:bg-banner-fondo">
+        <NavBar />
+        <h1 className="text-white text-3xl text-center">
+          {" "}
+          Usuarios ({user_data.length}){" "}
+        </h1>
+        {user_data.map((user) => (
+          <div key={user._id}>
+            <h1>{user.last + ", " + user.name}</h1>
+            <strong>{user.email}</strong>
+            <br />
+            <ul>
+              <li>{VerificarTipo(user.tipo_de_usuatrio)}</li>
+              <li>{VerificarEstado(user.estado_de_usuatrio)}</li>
+            </ul>
+          </div>
+        ))}
+        <Footer />
+      </main>
+    );
 }
 
 export default user;
