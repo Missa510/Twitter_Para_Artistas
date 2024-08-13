@@ -18,7 +18,10 @@
 > npx shadcn-ui@latest init
 > <br>
 > npm install next-themes
-
+> <br>
+> npm i zod
+> <br>
+> npm i bcrypt
 
 * Actualizar dependencias de 1
 
@@ -98,7 +101,7 @@ Esto se puede cambiar a necesidad de los dos. Lo puedes usar en **MongoDB Compas
 
 3. User 
 
-> db.usermodels.insertMany( [{ 'name': ' ', 'last': ' ', 'nick': ' ', 'bio': 'Negros de Mierda', 'email': ' ', 'password': ' ', 'lugar_de_origen': '', 'tipo_de_usuario': { 'Id_provisional': 1 }, 'estado_de_usuario': { 'Id_provisional': 1 } }] )
+> db.usermodels.insertMany( [{ 'name': ' ', 'last': ' ', 'nick': ' ', 'bio': 'Negros de Mierda', 'email': ' ', 'password': ' ', 'lugar_de_origen': '', 'tipo_de_usuario': { '_id': ' ' }, 'estado_de_usuario': { '_id': ' ' } }] )
 
 # TODO
 

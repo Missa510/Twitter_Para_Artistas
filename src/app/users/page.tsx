@@ -18,7 +18,8 @@ async function CargarUsuarios() {
 async function VerificarEstado(data_user: Array<any>): Promise<string> {
 
     // Poner la vairable como Array (viene como Object de todos modos)
-    const BuscarEstado = data_user as Array<any>
+    const [BuscarEstado] = data_user
+    // console.log(BuscarEstado)
 
     // Coneccion con la Base de datos
     await ConeccionAlDB()
@@ -36,7 +37,7 @@ async function VerificarEstado(data_user: Array<any>): Promise<string> {
 async function VerificarTipo(data_user: Array<any>): Promise<string> {
 
     // Poner la vairable como Array (viene como Object de todos modos)
-    const BuscarTipo = data_user as Array<any>
+    const [BuscarTipo] = data_user as Array<any>
     // console.log(BuscarTipo)
 
     // Coneccion con la Base de datos
@@ -56,11 +57,15 @@ async function user() {
     const user_data = await CargarUsuarios() as Array<any>
 
     if (user_data.length == 0) {
-        return <h1 className="text-white text-3xl text-center">No hay usuarios registrados</h1>  // Mensaje de error si no hay usuarios en la base de datos
+        return <>
+            <NavBar />
+
+            <h1 className="text-white text-3xl text-center">No hay usuarios registrados</h1>  // Mensaje de error si no hay usuarios en la base de datos
+        </>
     }
     // console.log(user_data)
     return (
-        <main>
+        <main className='bg-banner-fondo-claro dark:bg-banner-fondo conteiner bg-no-repeat bg-cover bg-center h-dvh'>
             <NavBar />
             <h1 className="text-white text-3xl text-center"> Usuarios ({user_data.length}) </h1>
             {user_data.map((user) => (
@@ -70,10 +75,10 @@ async function user() {
                     <br />
                     <ul>
                         <li>
-                            {VerificarTipo(user.tipo_de_usuatrio)}
+                            {VerificarTipo(user.tipo_de_usuario)}
                         </li>
                         <li>
-                            {VerificarEstado(user.estado_de_usuatrio)}
+                            {VerificarEstado(user.estado_de_usuario)}
                         </li>
                     </ul>
                 </div>
