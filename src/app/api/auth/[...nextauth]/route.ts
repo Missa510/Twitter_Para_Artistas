@@ -3,7 +3,7 @@ import GoogleProvider from "next-auth/providers/google";
 import AppleProvider from "next-auth/providers/apple";
 // import Apple from "next-auth/providers/apple";
 import NextAuth from "next-auth/next";
-import Apple from "next-auth/providers/apple";
+// import AppleProvider from "next-auth/providers/apple";
 
 const AuhtOptions = {
   providers: [

@@ -3,11 +3,11 @@ import mongoose from "mongoose";
 
 // crear esquema
 const esquema_user = {
-    name: { type: String, required: false },
-    last: { type: String, required: false },
-    nick: { type: String, required: true },
+    name: { type: String },
+    last: { type: String },
+    nick: { type: String, required: true, unique: true, min: 3, max: 256 },
     bio: { type: String },
-    email: { type: String, required: true, unique: true },
+    email: { type: String, required: true, unique: true, min: 3, max: 256 },
     password: { type: String, required: true, select: false },
     lugar_de_origen: { type: String, required: true },
     tipo_de_usuario: { type: Array, required: true },

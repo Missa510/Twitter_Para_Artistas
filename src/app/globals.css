@@ -59,25 +59,21 @@
   }
 }
 
-#texto-home{
+#texto-home {
   /* opacity: fadeIn; */
-  animation: fadeIn 1s ease-out !important; /* Para que sea lo primero que salga */
+  animation: fadeIn 1s ease-out !important;
+  /* Para que sea lo primero que salga */
   animation-delay: 200ms;
 }
 
 @keyframes fadeIn {
 
-  0% { opacity: 0; }
-  
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 
 }
-
-/* @layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-} */

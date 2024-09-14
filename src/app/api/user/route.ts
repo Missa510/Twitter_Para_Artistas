@@ -1,11 +1,9 @@
 import { ConeccionAlDB } from "@/libs/coneccion";
 import UserModel from "@/models/usuario";
 import { NextResponse, NextRequest } from "next/server";
-// import { NextApiRequest } from "next";
 
-// import type { NextApiRequest } from 'next'
-//Mostrar info de User
-export async function GET() {
+//Mostrar info de los Users
+export async function GET(): Promise<Response> {
     //Coneccion asincrónica
     await ConeccionAlDB()
 
@@ -16,12 +14,20 @@ export async function GET() {
 }
 
 export async function POST(request: NextRequest): Promise<Response> {
-    //Coneccion asincrónica
-    await ConeccionAlDB()
-    const data = await request.json()
-    // console.log(data)
 
-    const user = await UserModel.create(data)
-    // Respuesta del servidor
-    return NextResponse.json(user)
+    try {
+        //Coneccion asincrónica
+        await ConeccionAlDB()
+        const data = await request.json()
+        // console.log(data)
+
+        const user = await UserModel.create(data)
+        // Respuesta del servidor
+        return NextResponse.json(user)
+
+    } catch (e) {
+        console.error(e)
+        return NextResponse.json(e, { status: 500 })
+    }
+    
 }
